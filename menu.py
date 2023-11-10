@@ -1,4 +1,4 @@
-`1# Menu dictionary
+# Menu dictionary
 menu = {
     "Snacks": {
         "Cookie": .99,
@@ -52,7 +52,7 @@ menu = {
 
 # 1. Set up order list. Order list will store a list of dictionaries for
 # menu item name, item price, and quantity ordered
-
+ls_dict = [{'Snacks' : 1, 'Meals' : 2, 'Drinks' : 3, 'Dessert' : 4}]
 
 # Launch the store and present a greeting to the customer
 print("Welcome to the variety food truck.")
@@ -118,31 +118,41 @@ while place_order:
                     }
                     i += 1
             # 2. Ask customer to input menu item number
-
+                Print("Input menu item number. ")
 
             # 3. Check if the customer typed a number
+                if item_name.isdigit():
 
                 # Convert the menu selection to an integer
+                int(item_name)
 
 
                 # 4. Check if the menu selection is in the menu items
 
                     # Store the item name as a variable
-
+                    item_name = item_name
 
                     # Ask the customer for the quantity of the menu item
-
+                    print ("What quantity would you like of the menu item? ")
 
                     # Check if the quantity is a number, default to 1 if not
-
+                    if quantity.isdigit():
+                    i=1
+                
 
                     # Add the item name, price, and quantity to the order list
-
-
+                        order.append({
+                            "item name" : item_name,
+                            "Price" : menu_items[menu_selection][Price],
+                            "Quantity" : quantity,
+                            })
+                        
+                    while True:
+                            keep_ordering = str(input("Would you like to keep ordering?" ))
+                            keep_ordering = keep_ordering.lower()
                     # Tell the customer that their input isn't valid
-
-
-                # Tell the customer they didn't select a menu option
+            else:
+                print("your input is not valid")
 
         else:
             # Tell the customer they didn't select a menu option
@@ -158,43 +168,67 @@ while place_order:
         # 5. Check the customer's input
 
                 # Keep ordering
+        match keep_ordering:
+            case 'y':
+                place_order = False
+            
+            case 'n':
+                place_order = True
+
+            case _:
+
+                print("invalid input.  Please enter 'Y' or 'N' :")
 
                 # Exit the keep ordering question loop
+                break
 
                 # Complete the order
-
+                if keep_ordering = n 
+                break
                 # Since the customer decided to stop ordering, thank them for
                 # their order
+                print("Thank you for your order.")
+
 
                 # Exit the keep ordering question loop
-
+                break 
 
                 # Tell the customer to try again
-
+                print("Please try again.")
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
 
 # Uncomment the following line to check the structure of the order
-#print(order)
+print(order)
 
 print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
 
 # 6. Loop through the items in the customer's order
+    for (order)
+    Print(order)
+
 
     # 7. Store the dictionary items as variables
-
-
+    ls_dict = list(menu())[0]
     # 8. Calculate the number of spaces for formatted printing
 
 
     # 9. Create space strings
-
-
     # 10. Print the item name, price, and quantity
+    print print("Item # | Item name                | Price")
+            print("-------|--------------------------|-------")
+            for item_names, menu_items, quantity()
 
 
 # 11. Calculate the cost of the order using list comprehension
+    newOrder = [item_names, menu_items, quantity, price]
+
+
 # Multiply the price by quantity for each item in the order list, then sum()
+    for newOrder:
+        quantity.price *=
+        save()
 # and print the prices.
+    print(newOrder)
